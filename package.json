@@ -1,0 +1,27 @@
+{
+  "name": "scripto",
+  "version": "0.0.3",
+  "description": "A new screenwriting filetype",
+  "main": "src/skripto.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "npm run",
+    "start": "node src/testlibrary.js",
+    "commit": "commit-wizard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-duck/scripto"
+  },
+  "author": "The Duck",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "mustache": "^2.3.0"
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  }
+}
