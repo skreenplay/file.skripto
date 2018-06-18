@@ -3,8 +3,8 @@
 
 var dataSkeleton = {
   filetype: {
-    version:"0.0.2",
-    url:"https://github.com/the-duck/Skripto/"
+    version:"0.0.4å",
+    url:"https://github.com/skreenplay/skripto"
   },
   meta: {
     title:"",
@@ -77,10 +77,13 @@ function setScriptFromObjects(Skriptobjects){
 }
 
 function Skripto() {
-  this.data = dataSkeleton;
+  var data = dataSkeleton;
   /* Input and output */
   this.loadData = function(stringData) {
     this.data = formatData(stringData);
+  };
+  this.loadSkeletonData = function() {
+    this.data = data;
   };
   this.getStringData = function () {
     //TODO update this.data.script
@@ -123,7 +126,6 @@ function Skripto() {
         itemsList.push(item.type+" "+item.content);
       }
     }
-    console.log(itemsList);
     this.data.script = itemsList;
     /*this.setScript(newitems);*/
   }
@@ -137,7 +139,6 @@ function Skripto() {
         console.log('removed', item);
       }
     }
-    console.log(newitems);
     this.setScript(newitems);
   }
   this.updateScriptItem = function(item) {
